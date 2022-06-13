@@ -1,75 +1,15 @@
-# FlaskBlog Notes
+# Templates
 
-## Keywords
+## Templates - _Jinja2_
 
-business logic -
-use real world business rules to determine how data can be created, stored, changed
-
-presentation logic -
-front end, how objects are displayed to users
-
-rendering - replacing variables with actual values
-
-## Routing
-
-- make_response()
-- render_template()
-
-- abort()
-
-## The first application
-
-```python
-# __name__ parameter passes project name and file location to Flask
-app = Flask(__name__)
-```
-
-## Terminal commands
-
-```commandline
-set FLASK_APP=hello.py
-set FLASK_DEBUG=1
-
-flask run
-
-# All computers in the network can connect
-flask run --host 0.0.0.0
-```
-
-_set_ command is replaced by _export_ on Linux
-
-## Debug mode
-
-Consists of 2 modules:
-1. reloader
-2. debugger
-
-## Context globals
-
-- current_app - active app
-- g - temporary storage using dot notation (dict like)
-- request - contents of client request
-- session - user session, store values remembered between requests
-
-## Hooks
-- before_request
-- before_first_request (server initialization)
-- after_request
-- teardown_request
-(function to run after each request even if unhandled exceptions occurred)
-
-## Extensions
-
-### Templates - _Jinja2_
-
-#### Variables
+### Variables
 
 
 ```html
 <h1>{{ name }}}</h1>
 ```
 
-#### Filters
+### Filters
 - safe - without escaping
 - capitalize
 - lower
@@ -82,9 +22,9 @@ Consists of 2 modules:
 <h1>{{ name|capitalize }}}</h1>
 ```
 
-#### Control structures
+### Control structures
 
-##### Conditional statements
+#### Conditional statements
 ```html
 {% if user %}
     Hello, {{ user }}}!
@@ -93,7 +33,7 @@ Consists of 2 modules:
 {% endif %}
 ```
 
-##### Loops
+#### Loops
 ```html
 <ul>
     {% for comment in comments %}
@@ -102,7 +42,7 @@ Consists of 2 modules:
 </ul>
 ```
 
-##### Macros (function like)
+#### Macros (function like)
 ```html
 {% macro render_comment(comment) %}
 <li>{{ comment }}}</li>
@@ -112,11 +52,22 @@ Consists of 2 modules:
 {% import "macros.html" as macros %}
 ```
 
-##### Reusing template code
+#### Reusing template code
+
+```html
+{% import 'macros.html' as macros %}
+<ul>
+{% for comment in comments %}
+{{ macros.render_comment(comment) }}
+{% endfor %}
+</ul>
+```
 
 ```html
 {% include "common.html" %}
+```
 
+```html
 <!-- Replace each block in base.html with given data -->
 {% extends "base.html" %}
 {% block title}Index{% endblock %}
@@ -124,7 +75,7 @@ Consists of 2 modules:
 
 If the content is both in base and derived templates, the derived template is used.
 
-### Bootstrap
+## Bootstrap
 
 ```python
 pip install flask-bootstrap
@@ -145,11 +96,11 @@ There are additional blocks as well.
 {% extends "bootstrap/base.html" %}
 ```
 
-### Custom error pages
+## Custom error pages
 
 The easiest way is to extend _bootstrap/base.html_ with _base.html_
 
-### Links
+## Links
 
 Having more than one route and addressing links in the templates
 will create dependencies.
@@ -164,11 +115,11 @@ url_for("index", _external=True)  # Relative path - usage in application
 url_for("index", _external=True)  # Absolute path - usage in email
 ```
 
-### Static files
+## Static files
 
 Special root _/static/\<filename>_ supports static files.
 
-### Flask-Moment
+## Flask-Moment
 
 ```commandline
 pip install flask-moment
@@ -183,6 +134,7 @@ moment = Moment(app)
 ```
 
 ```html
+<!--super() call makes sure all previous scripts (Bootstrap etc.) are run-->
 {% block scripts %}
 {{ super() }}
 {{ moment.include_moment() }}
