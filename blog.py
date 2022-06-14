@@ -11,16 +11,16 @@ def index():
     return render_template("index.html", blog_name=BLOG_NAME)
 
 
-@app.route("/about.html")
+@app.route("/about")
 def about():
     return render_template("about.html", blog_name=BLOG_NAME)
 
 
-@app.route("/contact.html")
+@app.route("/contact")
 def contact():
     return render_template("contact.html", blog_name=BLOG_NAME)
 
 
-@app.route("/post.html")
+@app.route("/post")
 def post():
     return render_template("post.html", blog_name=BLOG_NAME)
