@@ -14,4 +14,11 @@ if __name__ == "__main__":
 
     for file_name in ("about", "contact", "post"):
         p = Path(f"./docs/{file_name}")
+        with open(p, encoding="UTF-8") as f:
+            fixed_relative_path = f.read().replace(
+                "../static",
+                "./static",
+            )
+            with open(p, "w", encoding="UTF-8") as f:
+                f.write(fixed_relative_path)
         p.rename(p.with_suffix(".html"))
