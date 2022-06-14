@@ -141,3 +141,5 @@ moment = Moment(app)
 {% endblock %}}
 ```
 
+[Moment.js documentation](https://momentjs.com/docs/) provides information about different formatting options.
+

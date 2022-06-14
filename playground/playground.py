@@ -1,15 +1,18 @@
 import random
+from datetime import datetime
 
 from flask import Flask, make_response, redirect, abort, render_template
 from flask_bootstrap import Bootstrap
+from flask_moment import Moment
 
 app = Flask(__name__)
 bootstrap = Bootstrap(app)  # Bootstrap is ready to use in templates
+moment = Moment(app)
 
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", current_time=datetime.utcnow())
 
 
 @app.route("/say_hello/<name>")
@@ -50,5 +53,3 @@ def favorite_number(number):
 @app.route("/show_html/<html>")
 def show_html(html):
     return render_template("show_html.html", html=html)
-
-
