@@ -1,3 +1,4 @@
+import flask
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -12,7 +13,9 @@ def index():
 
 @app.route("/about")
 def about():
-    return render_template("about.html", blog_name=BLOG_NAME)
+    response = flask.Response(render_template("about.html", blog_name=BLOG_NAME))
+    response.headers['Content-Type'] = "text/css; charset=utf-8"
+    return response
 
 
 @app.route("/contact")
