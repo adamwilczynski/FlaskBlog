@@ -11,18 +11,16 @@ def index():
     return render_template("index.html", blog_name=BLOG_NAME)
 
 
-@app.route("/about")
+@app.route("/about.html")
 def about():
-    response = flask.Response(render_template("about.html", blog_name=BLOG_NAME))
-    response.headers['Content-Type'] = "text/css; charset=utf-8"
-    return response
+    return render_template("about.html", blog_name=BLOG_NAME)
 
 
-@app.route("/contact")
+@app.route("/contact.html")
 def contact():
     return render_template("contact.html", blog_name=BLOG_NAME)
 
 
-@app.route("/post")
+@app.route("/post.html")
 def post():
     return render_template("post.html", blog_name=BLOG_NAME)
