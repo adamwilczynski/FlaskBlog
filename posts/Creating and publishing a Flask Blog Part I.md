@@ -164,6 +164,7 @@ pip freeze > requirements.txt
 ### Procfile
 
 The second file is needed by gunicorn. What's important is that it has **no extension**. Inside it there should be a one line:
+
 `web: gunicorn <file_name>:<flask_app_variable_name>`
 
 In our case:
@@ -195,6 +196,6 @@ What can you say to dynamically responding to user actions using forms?
 We will cover those in the future tutorials. Stay tuned!
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5OTg2Mzc1OSwxMjE3MTgwMzI3LDg1NT
+eyJoaXN0b3J5IjpbLTkzNjA2NTk4MSwxMjE3MTgwMzI3LDg1NT
 Y4NDUzXX0=
 -->
