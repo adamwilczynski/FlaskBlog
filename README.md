@@ -14,4 +14,7 @@ Published website: http://entropista.tech/
 ### Back-end:
 
 - [flask](https://pypi.org/project/Flask/)
-- [markdown](https://pypi.org/project/Markdown/)
+- [markdown](https://pypi.org/project/Markdown/Flask (Jinja2, )
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTY5NjczMDc1NV19
+-->
