@@ -168,8 +168,7 @@ The second file is needed by gunicorn. What's important is that it has **no exte
 `web: gunicorn <file_name>:<flask_app_variable_name>`
 
 In our case:
-
-```
+```text
 web: gunicorn blog:app
 ```
 
@@ -196,6 +195,6 @@ What can you say to dynamically responding to user actions using forms?
 We will cover those in the future tutorials. Stay tuned!
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzNjA2NTk4MSwxMjE3MTgwMzI3LDg1NT
+eyJoaXN0b3J5IjpbMTk4MzcwMDM1NCwxMjE3MTgwMzI3LDg1NT
 Y4NDUzXX0=
 -->
