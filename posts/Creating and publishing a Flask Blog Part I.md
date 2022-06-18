@@ -15,6 +15,7 @@ Create a new project folder and name it (in my case, _FlaskBlog_). Inside it cre
 Folders:
  - `static`
  - `templates`
+ 
 ```
 FlaskBlog
 │   README.md
@@ -191,5 +192,5 @@ What can you say to dynamically responding to user actions using forms?
 We will cover those in the future tutorials. Stay tuned!
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU1Njg0NTNdfQ==
+eyJoaXN0b3J5IjpbMTIxNzE4MDMyNyw4NTU2ODQ1M119
 -->
