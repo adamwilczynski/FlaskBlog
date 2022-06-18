@@ -16,6 +16,7 @@ Folders:
  - `static`
  - `templates`
 ```
+
 FlaskBlog
 │   README.md
 │	blog.py
@@ -191,5 +192,5 @@ What can you say to dynamically responding to user actions using forms?
 We will cover those in the future tutorials. Stay tuned!
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODU1Njg0NTNdfQ==
+eyJoaXN0b3J5IjpbMjIwMDkwODY3LDg1NTY4NDUzXX0=
 -->
