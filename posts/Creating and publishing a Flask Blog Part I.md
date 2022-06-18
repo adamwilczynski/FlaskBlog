@@ -167,10 +167,13 @@ The second file is needed by gunicorn. What's important is that it has **no exte
 `web: gunicorn <file_name>:<flask_app_variable_name>`
 
 In our case:
+
 ```
 web: gunicorn blog:app
 ```
+
 `blog.py` is the file in which we store Flask application variable which is used with the name of _app_ in our code:
+
 ```python
 ...
 app = Flask(__name__)
@@ -192,5 +195,6 @@ What can you say to dynamically responding to user actions using forms?
 We will cover those in the future tutorials. Stay tuned!
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxNzE4MDMyNyw4NTU2ODQ1M119
+eyJoaXN0b3J5IjpbLTI5OTg2Mzc1OSwxMjE3MTgwMzI3LDg1NT
+Y4NDUzXX0=
 -->
