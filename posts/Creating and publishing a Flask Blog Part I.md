@@ -9,10 +9,12 @@ In the first part of the tutorial, we will focus on creating MVP (Minimum viable
 ## Creating project files
 
 Create a new project folder and name it (in my case, _FlaskBlog_). Inside it create files:
+
  - `README.md` (for documentation)
  - `blog.py` (Flask app)
  
 Folders:
+
  - `static`
  - `templates`
  
