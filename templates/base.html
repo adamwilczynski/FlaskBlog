@@ -32,13 +32,13 @@
         </div>
     </nav>
 
-    <header class="masthead" style="background-image:url('../static/img/headers/header_{{ 100 |random }}');">
+    <header class="masthead" style="background-image:url('../static/img/headers/header_{{ range(0, 100) |random }}.png');image-rendering: pixelated;">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-lg-8 mx-auto position-relative">
                     <div class="site-heading">
-                        <h1>EntropistA Blog</h1><span class="subheading">Python programming</span>
+<!--                        <h1>EntropistA Blog</h1><span class="subheading">Python programming</span>-->
                     </div>
                 </div>
             </div>
